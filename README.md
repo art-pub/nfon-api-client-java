@@ -59,6 +59,26 @@ Add the package to you pom.xml:
 ### Result Parsing
 The result is JSON-like, but difficult to read or process. So as a little help see the example [PhoneBookRequest](https://github.com/art-pub/nfacj/blob/main/nfonapi/src/main/java/com/silegio/nfon/examples/PhoneBookRequest.java#L56).
 
+### Examples
+There are two examples, one with a single result request [StatusRequest](https://github.com/art-pub/nfon-api-client-java/blob/main/nfonapi/src/main/java/com/silegio/nfon/examples/StatusRequest.java) and one with a multiple result request [PhoneBookRequest](https://github.com/art-pub/nfon-api-client-java/blob/main/nfonapi/src/main/java/com/silegio/nfon/examples/PhoneBookRequest.java).
+
+#### StatusRequest
+You can start this example by providing the API url:
+```bash
+bash$ java StatusRequest.java https://api09.nfon.com
+Version: 1.17.8.0, BuilTime: 2023-11-07 21:19, Host: api09.nfon.com
+bash$
+```
+
+#### PhoneBookRequest
+You need to have a valid API key pair for this request:
+```bash
+bash$ java PhoneBookRequest.java https://api09.nfon.com NFON-ABCDEF-123456 gAp3bTxxUev5JkxOcBdeC5Absm7J84jp6mEhJZd3XiLdjzoGSF K1234
+-> First Contact: +49 (89) 123-456
+-> Hans im Glueck: +49 (894) 123-457
+-> Captain Nemo: +49 (894) 123-458
+```
+
 ### Good to know
 
 #### Datasets and Pagination
